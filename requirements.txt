@@ -1,0 +1,5 @@
+fastAPI
+Jinja2
+python-multipart
+uvicorn
+psycopg2-binary
