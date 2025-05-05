@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Записки</title>
+</head>
+<body>
+    <h1>Дом</h1>
+    <form action="/add" method="post">
+        <textarea name="name" rows="1" cols="50" placeholder="Введите название записки"></textarea><br>
+        <textarea name="note" rows="4" cols="50" placeholder="Введите текст записки..."></textarea><br>
+        <button type="submit">Добавить</button>
+    </form>
+    <hr>
+    <h2>Все записки</h2>
+    {% for note in notes %}
+        <a href="note/{{ note }}">{{ note }}</a>
+        <br>
+    {% else %}
+        <p>Записок нет.</p>
+    {% endfor %}
+</body>
+</html>
